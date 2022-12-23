@@ -4,6 +4,7 @@ import '../../styles/productcard.css'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux';
 import { cartAction } from '../../redux/slices/cartSlice'
+import {  toast } from 'react-toastify';
 function ProductCard({ item }) {
     const dispatch = useDispatch()
     const addToCard = () => {
@@ -13,7 +14,7 @@ function ProductCard({ item }) {
             price: item.price,
             image: item.imgUrl,
         }))
-        alert("product added to cart")
+        toast.success('Buyurtmangiz qabul qilindi')
     }
 
 
@@ -35,6 +36,7 @@ function ProductCard({ item }) {
             </div>
 
         </div>
+
     );
 }
 

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 .container{
+
   max-width: 1170px;
   margin:auto;
 }
@@ -12,6 +13,7 @@ ul{
   list-style: none;
 }
 .footer{
+  margin-top:80px;  
   background-color: #24262b;
     padding: 70px 0;
 }

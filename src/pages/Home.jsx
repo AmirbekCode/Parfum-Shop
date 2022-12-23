@@ -44,7 +44,7 @@ const Home = () => {
                 <div className="hero-content">
                     <p className="hero-subtitle">Topdagi mahsulotlar</p>
                     <h2>Bizning mahsulotlarni sotib olish orqali keyingi mahsulotga 10%lik chegirma oling</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur tempora, cumque quos quidem deleniti inventore. Aut, eum. Incidunt, cum error blanditiis nisi dolorum sed sint laboriosam voluptatibus quo ipsam ad, veritatis repellat recusandae ea?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur  Aut, eum. Incidunt, cum error blanditiis nisi dolorum sed sint laboriosam voluptatibus quo ipsam ad, veritatis repellat recusandae ea?</p>
                     <button className='buy-btn'><Link to="shop"> Ko'rish</Link> </button>
                 </div>
                 <div className='hero-img'>

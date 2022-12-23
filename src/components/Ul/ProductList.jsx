@@ -1,6 +1,7 @@
 import React from 'react';
 import ProductCard from '../Ul/ProductCard'
 import '../../styles/productcard.css'
+import '../../styles/home.css'
 function ProductList({data}) {
     return ( 
         <div className='ProductList'>
