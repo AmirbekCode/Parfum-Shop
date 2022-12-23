@@ -13,7 +13,3 @@
 .service-item i {
     font-size: 32px;
 }
-
-.service-item:hover {
-    transform: translateY(-25px);
-}
