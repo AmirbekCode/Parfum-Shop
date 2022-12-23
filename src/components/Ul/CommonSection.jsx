@@ -7,4 +7,4 @@ const CommonSection = ({ title }) => {
   </div>
 }
 
-export default CommonSection
+export default CommonSection;

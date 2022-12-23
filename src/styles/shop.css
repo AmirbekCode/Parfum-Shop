@@ -1,0 +1,64 @@
+.search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    
+}
+
+.searchbar {
+    width: 250px;
+    padding: 12px;
+    border-radius: 7px;
+    border: none;
+    background: rgb(212, 218, 255);
+    border: 2px solid rgba(0, 128, 0, 0);
+}
+
+.searchbar::placeholder {
+    font-family: 'poppins';
+}
+
+.searchbar:focus {
+    outline: none;
+    border: 2px solid green;
+}
+
+.icon-box {
+    position: relative;
+    top: 0;
+    right: 50px;
+}
+
+.fa-search {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    color: rgba(0, 0, 0, 0.466);
+}
+
+.products-shop {
+    display:flex;
+    flex-direction: column;
+}
+
+.padding-default {
+    padding: 50px 200px;
+  }
+  
+
+.noneword {
+    text-align:center;
+
+}
+
+
+@media only screen  and (max-width:768px){
+    .padding-default {
+        padding:  20px 40px;
+    }
+
+    .searchbar {
+        width: 200px;
+    }
+}

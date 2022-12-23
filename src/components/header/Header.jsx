@@ -20,11 +20,12 @@ const nav__link = [
     },
 ]
 const Header = () => {
+
+  const menuRef = useRef(null)
+  const menuToggle = () => menuRef.current.classList.toggle('active__menu')
   const totalQuantity = useSelector(state=> state.cart.totalQuantity)
   return (
     <header className="header sticky__header">
-      <Container>
-        <Row>
           <div className="nav-wrapper">
             <div className="logo">
             <h4 className="name-shop">Zamon Parfum</h4>                
@@ -32,7 +33,7 @@ const Header = () => {
             </div>
 
 
-            <div className="navigation ">
+            <div className="navigation " ref={menuRef} onClick={ menuToggle}>
               <ul className="menu">
                 {
                     nav__link.map(item=>(
@@ -60,15 +61,13 @@ const Header = () => {
                 <img src={userIcon} />
               </span>
               <div className="mobile-menu">
-              <span>
+              <span onClick={menuToggle}>
                 <i class="ri-menu-line"></i>
               </span>
             </div>
             </div>
 
           </div>
-        </Row>
-      </Container>
     </header>
   );
 }
