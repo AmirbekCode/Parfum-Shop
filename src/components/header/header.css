@@ -1,0 +1,97 @@
+*{
+    transition: 0.1s;
+}
+
+.header {
+    width: 100%;
+    height: 70px;
+    background: var(--card-bg-01);
+    position: fixed;
+    z-index:999;
+    margin-bottom: 200px;
+}
+
+.nav-wrapper{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 60px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.menu li {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.indicator {
+    background: orange;
+    width: 100%;
+    height: 2px;
+    border-radius: 15px;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+.menu li:hover {
+    color: rgba(255, 187, 0, 0.863);
+}
+.menu li:hover .indicator{
+    opacity: 1;
+}
+
+
+.logo h4 {
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+.nav-icons span {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.cart-icon, .fav-icon {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    bottom: 70%;
+    right: -5px;
+    background: orange;
+    color: aliceblue;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    font-size:10px !important;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-icons span:hover i {
+    color: orangered;
+}
+
+.mobile-menu i {
+    font-size: 18px;
+}

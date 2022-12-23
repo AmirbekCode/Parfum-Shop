@@ -1,0 +1,19 @@
+.service-item {
+    display: flex;
+    width: 280px;
+    padding: 20px 30px;
+    gap: 15px;
+    align-items: center;
+    transition: 0.3s;
+    user-select: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.service-item i {
+    font-size: 32px;
+}
+
+.service-item:hover {
+    transform: translateY(-25px);
+}
