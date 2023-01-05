@@ -1,13 +1,14 @@
 import React,{useRef, useEffect} from "react";
 import "./header.css";
-import { Container, Row } from "reactstrap";
 import userIcon from "../../assets/images/user-icon.png";
 import { NavLink } from "react-router-dom"
 import { useSelector } from "react-redux";
 
+
+
 const nav__link = [
     {
-        path: "home",
+        path: "/",
         display: 'Asosiy'
     },
     {
@@ -50,7 +51,7 @@ const Header = () => {
                 <i class="ri-shopping-cart-line"></i>
                 <span className="badge">{totalQuantity}</span>
               </span>
-              <span className="bag-icon">
+              <span className="bag-icon" to="cart">
                 <i class="ri-shopping-bag-line" to={nav__link.path}></i>
               </span>
               <span className="fav-icon">

@@ -8,7 +8,7 @@ function Layout() {
         <>
         <Header/>
         <div>
-            <Routers Route={parsePath.home}/>
+            <Routers Route={parsePath}/>
         </div>
         <Footer/>
         </>

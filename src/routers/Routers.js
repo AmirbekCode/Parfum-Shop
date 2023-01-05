@@ -6,16 +6,18 @@ import ProductDetails from '../pages/ProductDetails'
 import Checkout from '../pages/Checkout'
 import Login from '../pages/Login'
 import SignUp from '../pages/Signup'
+import product from '../assets/data/products'
 function Routers() {
     return <Routes>
-        <Route path='' element={Navigate} to='home'/>
-        <Route path='home' element={<Home/>} />
+        {/* <Route path='' element={Navigate} to='home'/> */}
+        <Route path='/' element={<Home/>} />
         <Route path='shop' element={<Shop/>} />
         <Route path='cart' element={<Cart/>} />
-        <Route path='productDetails' element={<ProductDetails/>} />
+        <Route path='shop/:id' element={<ProductDetails/>} />
         <Route path='checkout' element={<Checkout/>} />
         <Route path='login' element={<Login/>} />
         <Route path='signup' element={<SignUp/>} />
+
     </Routes>;
 }
 
