@@ -1,63 +1,73 @@
 import React from 'react';
 import Helmet from '../components/Helmet/Helmet'
 import '../styles/cart.css'
-import {cartAction} from "../redux/slices/cartSlice"
-import {useSelector, useDispatch} from "react-redux"
-import Services from '.'
-
+import { cartAction } from "../redux/slices/cartSlice"
+import { useSelector, useDispatch } from "react-redux"
+import { Link } from 'react-router-dom';
+import div from '../assets/images/div.png'
 function Cart() {
 
-    const cartItems = useSelector((state)=> state.cart.cartItems);
-
-
-    return ( 
+    const cartItems = useSelector((state) => state.cart.cartItems);
+    const totalAmout = useSelector((state) => state.cart.totalAmout);
+    return (
         <div>
             <Helmet title="Cart">
-                <section className='padding-default tableCart'>
+                <section className='tableCart'>
                     {
-                        cartItems.length===0 ? <h2 className='nothing'>Siz hech narsa buyurtma qilmadingiz !</h2>:
-                        <table>
-                            <thead>
-                            <tr>
-                                <th>Rasm</th>
-                                <th>Nomi</th>
-                                <th>Narxi</th>
-                                <th>Soni</th>
-                            </tr>                        
-                            </thead>
-                            <tbody>
+                        cartItems.length === 0 ? <h2 className='nothing'>Sizda hozircha buyurtmalar yo'q</h2> :
+                            <div className='ListCart'>
                                 {
-                                    cartItems.map((item, index)=> (
-                                    <tr >
-                                        <td><img src={item.imgUrl} className="tdimg"/></td>
-                                        <td className='product-name-c'>{item.productName}</td>
-                                        <td>{item.price}.000.so'm</td>
-                                        <td>{item.quantity}</td>
-                                    </tr>
-                                    ))                                
-                                }
+                                    cartItems.map((item, index) => (
+                                        <div className='CardCart'>
 
-                            </tbody>                        
-                        </table>
-               
+                                            <div className='imgandinfo'>
+                                                <img src={item.imgUrl} className="tdimg" />
+                                                <div className="infoscart">
+                                                    <span className='product-name-c'>{item.productName}</span>
+                                                    <span className='qunty'>{item.quantity} dona</span>
+                                                    <span className='company_cart'>
+                                                        <span className='figm'>Продавец:</span>
+                                                        <span className='company_item'>Dior</span>
+                                                    </span>
+                                                    <span>{item.category}</span>
+                                                </div>
+                                            </div>
+                                            <div className="price_sec_cart">
+                                                <span>{item.price}.000.so'm</span>
+                                                <span className="sale_price_det">200.000 so'm</span>
+                                            </div>
+
+                                        </div>
+                                    ))
+                                }
+                            </div>
+
                     }
                     <section className='checkoutList'>
-                        <h3>Umumiy Summa</h3>
-                    </section>                     
+                        <div className='list-top'>
+                            <img src={div} />
+                            <span className="title_tr">
+                                Buyurtmangizni 2kun ichida bepul yetkazib beramiz
+                            </span>
+                        </div>
+                        <hr />
+                        <div className='list-bottom'>
+                            <span className='vashzakas'>Sizning buyurtmangiz</span>
+                            <div className="price-list">
+                                <span className="itog">
+                                    Итого:
+                                </span>
+                                <h2 className="totolAmout">{totalAmout}.000so`m</h2>
+                            </div>
+                            <Link to="/shop"><button className='checkout-btns'>Dokonga Qaytish</button></Link>
+                            <Link to="/checkout"><button className='checkout-btns'>Sotib Olish</button> </Link>
+                        </div>
+
+                    </section>
                 </section>
             </Helmet>
         </div>
-     );
+    );
 }
-
-// const Tr = ({item}) => {
-//     return  <tr >
-//     <td><img src={item.imgUrl} className="tdimg"/></td>
-//     <td className='product-name-c'>{item.productName}</td>
-//     <td>{item.price}.000.so'm</td>
-//     <td>{item.quantity}</td>
-//     <td><i class="fa-solid fa-trash"></i></td>                                
-// </tr>
-// }
 
 export default Cart;

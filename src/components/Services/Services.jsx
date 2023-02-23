@@ -11,8 +11,8 @@ function Services(props) {
                         <i className={item.icon}></i>
                     </span>
                     <div>
-                        <h3>{item.title}</h3>
-                        <p>{item.subtitle}</p>
+                        <h3 className='Servicetitle'>{item.title}</h3>
+                        <p className="Servicesubtitle">{item.subtitle}</p>
                     </div>
                 </div>
             ))

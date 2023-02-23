@@ -1,4 +1,4 @@
-*{
+* {
     transition: 0.1s;
 }
 
@@ -7,18 +7,24 @@
     height: 70px;
     background: var(--card-bg-01);
     position: fixed;
-    z-index:999;
-    box-shadow: 1px 8px 23px -5px rgba(0, 110, 195, 0.24);
+    z-index: 999;
 }
 
-.nav-wrapper{
-    display: flex ;
-    align-items: center ;
-    justify-content: space-between ;
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 15px 60px;
 }
 
-.navigation {
+.logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.logoimg{
+    width:50px;
 }
 
 .menu {
@@ -36,16 +42,13 @@
 .indicator {
     background: orange;
     width: 100%;
-    height: 2px;
+    height: 4px;
     border-radius: 15px;
     opacity: 0;
     transition: 0.8s;
 }
 
-.menu li:hover {
-    color: rgba(255, 187, 0, 0.863);
-}
-.menu li:hover .indicator{
+.menu li:hover .indicator {
     opacity: 1;
 }
 
@@ -71,39 +74,65 @@
     cursor: pointer;
 }
 
-.cart-icon, .fav-icon {
-    position: relative;
+.cart-icon,
+.fav-icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 2px 5px;
+    border-radius: 5px;
 }
+
+.cart-icon:hover {
+    background: rgba(111, 111, 111, 0.098);
+}
+
+.fav-icon:hover {
+    background: rgba(111, 111, 111, 0.098);
+}
+
+.cart-icon:hover .ri-shopping-cart-line{
+    color: rgb(0, 0, 0);
+}
+
+
+.korzina {
+    font-family: serif;
+    font-weight: 300 !important;
+    font-size: 17px !important;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+
+}
+
 
 .ri-menu-line {
     display: none;
 }
 
 .badge {
-    position: absolute;
-    bottom: 70%;
-    right: -5px;
     background: orange;
-    color: aliceblue;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    font-size:10px !important;
-    font-weight: 700;
+    width: 17.68px;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 2px;
+    font-size: 12px !important;
+    font-weight: 500;
 }
 
 .nav-icons span:hover i {
-    color: orangered;
+    color: black;
 }
 
 .mobile-menu i {
     font-size: 18px;
 }
 
-.sticky__header{
+.sticky__header {
     width: 100%;
     height: 70px;
     list-style: 70px;
@@ -111,12 +140,11 @@
     top: 0;
     left: 0;
     z-index: 999;
-    box-shadow: 3px 3px 8px -3px #ddd;
     background: #fff;
 }
 
 @media only screen and (max-width:768px) {
-    .ri-menu-line{
+    .ri-menu-line {
         display: block;
     }
 
@@ -143,14 +171,14 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        
+
     }
 
-    .nav-wrapper{
+    .nav-wrapper {
         padding: 5px 20px;
 
-        height:70px;
-        
+        height: 70px;
+
     }
 
     .nav-icons span {
@@ -165,19 +193,20 @@
     .logo h4 {
         color: var(--primary-color);
         font-size: 18px;
-        padding-top:50px;
+        padding-top: 50px;
     }
 
     .mobile__menu {
         display: block;
     }
 
-    .logo .name-shop{
+    .logo .name-shop {
         font-size: 1rem;
     }
+
     header {
-        width:100%;
-        height:60px;
-        line-height:60px;
+        width: 100%;
+        height: 60px;
+        line-height: 60px;
     }
 }

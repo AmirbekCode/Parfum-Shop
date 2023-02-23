@@ -65,14 +65,43 @@ a {
   background: #0a1d3771;
 }
 
+.section-title span{
+  text-align: start;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  padding-bottom: 5px;
+}
+
 .section-title {
-  color: var(--primary-color);
-  font-weight: 600;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 13px;
 }
 
-.padding-default {
-  padding: 50px 80px;
-  margin:0 auto;
+
+
+.checkOut {
+  position: relative;
 }
 
+@media only screen and (max-width:1468px) {
+  .padding-default {
+    padding: 50px 300px;
+    margin:0 auto;    
+  }
+  .mdef {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.mdef {
+  width: 1180px;
+  margin: 0 auto;
+}

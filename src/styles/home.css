@@ -1,20 +1,13 @@
 
 .Hero {
-    display: flex;
-    margin: 0 auto;
-    background: var(--hero-bg);
+
 }
 
 .hero-content h2 {
     color: var(--primary-color);
-    width:480px;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 600;
     margin: 20px 0px;
-}
-
-.hero-content p {
-    margin: 20px 0px; 
 }
 
 .buy-btn {
@@ -35,7 +28,7 @@
     display: flex;
     width: 100%;
     justify-content: space-around;
-    gap: 30px;
+    gap: 20px;
 }
 
 .arrival-products {
@@ -61,14 +54,12 @@
     display: flex;
     flex-wrap:wrap;
     gap: 13px;
-    margin:50px;
-    
-
+    margin-top: 40px;
 }
 
   @media only screen  and (max-width:768px){
     .padding-default {
-        padding:  20px 40px;
+        padding:  20px 10px;
     }
     .hero-content h2 {
         font-size: 1.5rem;
@@ -87,7 +78,7 @@
     }
 
     .hero-img  {
-        scale: 0.5;
+        display: none;
     }
 
     .Hero {
@@ -95,21 +86,18 @@
         flex-direction: column;
     }
 
+    .Services {
+        gap: 5px;        
+    }
+
     .ProductList {
         display: flex;
-        flex-direction: column;
-
+        flex-wrap: wrap;
     }
 
     .product-item {
         box-shadow: 0px 2px 13px -3px rgba(0, 0, 0, 0.26);
-    }
-
-    .service-item:hover {
-        scale: 1.1;
-    }
-    .service-item:hover {
-        transform: translateY(0px);
+        min-width: 150px !important;
     }
 
     .product-item {

@@ -1,22 +1,22 @@
 .search-box {
     display: flex;
+    width:250px ;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    
+    position: relative;
 }
 
 .searchbar {
     width: 250px;
     padding: 12px;
     border-radius: 7px;
-    border: none;
-    background: rgb(212, 218, 255);
-    border: 2px solid rgba(0, 128, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0.46);
 }
 
 .searchbar::placeholder {
     font-family: 'poppins';
+    color: rgba(0, 0, 0, 0.653);
 }
 
 .searchbar:focus {
@@ -24,17 +24,11 @@
     border: 2px solid green;
 }
 
-.icon-box {
-    position: relative;
-    top: 0;
-    right: 50px;
-}
-
 .fa-search {
     position: absolute;
     top: 12px;
-    right: 15px;
-    color: rgba(0, 0, 0, 0.466);
+    right: 10px;
+    color: black !important;
 }
 
 .products-shop {
@@ -42,23 +36,33 @@
     flex-direction: column;
 }
 
-.padding-default {
-    padding: 50px 200px;
-  }
-  
+
 
 .noneword {
     text-align:center;
-
+    font-size: 18px;
+    margin-top: 20px;
 }
 
 
 @media only screen  and (max-width:768px){
     .padding-default {
-        padding:  20px 40px;
+        padding:  20px 10px;
     }
 
     .searchbar {
         width: 200px;
     }
+
+    .shopContainer {
+        width: 100%;
+
+    }
+    .fa-search {
+        position: absolute;
+        top: 12px;
+        right: 33px;
+        color: rgb(255, 255, 255);
+    }
+
 }

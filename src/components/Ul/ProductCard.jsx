@@ -4,7 +4,7 @@ import '../../styles/productcard.css'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux';
 import { cartAction } from '../../redux/slices/cartSlice'
-import {  toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 function ProductCard({ item }) {
     const dispatch = useDispatch()
     const addToCard = () => {
@@ -14,7 +14,7 @@ function ProductCard({ item }) {
             price: item.price,
             imgUrl: item.imgUrl,
         }))
-        toast.success('Buyurtmangiz qabul qilindi')
+        toast.success('Savatga qo`shildi')
     }
 
 
@@ -23,17 +23,24 @@ function ProductCard({ item }) {
 
         <div className="product-item">
             <Link path='productDetails' to={`/shop/${item.id}`} >
-            <div className="product-img">
-                <img src={item.imgUrl} alt="" />
-            </div>
+                <div className="product-img">
+                    <img src={item.imgUrl} />
+                </div>
             </Link>
             <div className="product__info">
-                <h3 className='product_name'>{item.productName}</h3>
-                <span>{item.category}</span>
+                <div className="product-card_top">
+                    <h3 className='product_name'>{item.productName}</h3>
+                    <span className='company'>company name</span>
+                    <span className='category'>{item.category}</span>
+                </div>
+
                 <div className="product-card_bottom">
-                    <span className="price">{item.price} so'm</span>
+                    <div className="price_box">
+                        <span className="price_sale">200.000 so'm</span>
+                        <span className="price">{item.price}.000 so'm</span>
+                    </div>
                     <span className='buy__item ' onClick={addToCard}>
-                        <i className="ri-shopping-cart-line" ></i>
+                        <i class="fa-solid fa-cart-plus"></i>
                     </span>
                 </div>
             </div>

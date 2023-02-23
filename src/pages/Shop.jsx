@@ -5,12 +5,13 @@ import Helmet from '../components/Helmet/Helmet'
 import ProductList from '../components/Ul/ProductList'
 import "../styles/shop.css"
 import products from "../assets/data/products"
-
+import FreeSolo from '../components/serachbar/Search';
+import Vector from '../assets/images/Vector.svg'
 const str = null;
 
 const result = typeof str === 'string' ? str.toLowerCase() : '';
 
-console.log(result); // 👉️ ""
+console.log(result);
 
 
 function Shop() {
@@ -30,14 +31,12 @@ function Shop() {
                 <div className="padding-default">
                 <CommonSection title="Products"/>  
                 <section>
-                    <div className="search-box">
-                        <span className='icon-box'>                        
-                        <input type="text" placeholder='Atirlarni qidirish...' className='searchbar' onChange={ handleSearch } />
-                        <i className="fa-solid fa-search"></i>
-                        </span>
+                    <div className="search-box">                       
+                        <FreeSolo onChange={ handleSearch }/>
                     </div>    
                 </section>
-                <section>
+                <section className='shopContainer'>
+                <h2 className="section-title"><span>Все Товары</span>  <img src={Vector} /></h2>
                     {
                         productsData.length === 0 ? (
                         <h1 className="noneword">Hech narsa topilmadi !</h1>
